@@ -1,0 +1,21 @@
+spring.banner.location: classpath:traytbanner.txt
+screenshot.path: src/test/resources/screenshots
+browser: chrome
+default.timeout: 30
+---
+spring.config.activate.on-profile: dev
+portal:
+  url: https://dev.portal.trayt.io/
+  credentials: "{AUTO_ADMIN:'autotchattdev+auto1@gmail.com=Tchatt123$'}"
+
+---
+spring.config.activate.on-profile: qa
+portal:
+  url: https://dev.portal.trayt.io/
+  credentials: "{AUTO_ADMINQA:'autotchattdev+auto1@gmail.com=Tchatt123$'}"
+
+---
+spring.config.activate.on-profile: prod
+portal:
+  url: https://prod.portal.trayt.io/
+  credentials: "{AUTO_ADMINPROD:'autotchattdev+auto1@gmail.com=Tchatt123$'}"
