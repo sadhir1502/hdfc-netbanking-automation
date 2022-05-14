@@ -1,4 +1,4 @@
-package health.trayt.automation.cucumber.stepdefinitions;
+package health.trayt.automation.stepdefinitions;
 
 import health.trayt.automation.annotations.LazyAutowired;
 import health.trayt.automation.pages.HomePage;
@@ -14,17 +14,17 @@ public class LoginDemoStepDefs {
     @LazyAutowired
     private HomePage homePage;
 
-    @Given("^:User opens clinical portal$")
+    @Given("^User opens clinical portal$")
     public void userOpensClinicalPortal() {
         loginPage.openPortal();
     }
 
-    @Then("^:User validate that Login is Successful$")
+    @Then("^User validate that Login is Successful$")
     public void userValidateThatLoginIsSuccessful() {
         homePage.isLoaded();
     }
 
-    @And("^:Sign into portal as \"([^\"]*)\"$")
+    @And("^Sign into portal as \"([^\"]*)\"$")
     public void signIntoPortalAs(String arg0){
         loginPage.login(arg0);
     }
