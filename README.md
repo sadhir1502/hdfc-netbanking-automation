@@ -19,25 +19,26 @@ This  repository contains code for Trayt portal test automation
 2) ### How to add test to framework
    To include tests to framework follow below process.
    1) Write test cases in feature file by using gherkin language and put it in **features folder**.<br />
-      **Example:** Sample Feature file path src/test/resources/features/TraytPortalDemo.feature
+      **Example:** Sample Feature file path [TraytPortalDemo.feature](src/test/resources/features/TraytPortalDemo.feature)
    2) Generate Step definitions for the feature file by using any one of the below method.
       * [Intellij Cucumber java plugin](https://www.jetbrains.com/help/idea/creating-step-definition.html#navigate-steps-definitions) (Most preferred and easy way)
       * Right click on Feature file and add "spring.profiles.active=dev" as Environment variable in runconfiguration 
         and run the feature file. Cucumber will generate sample Step definitions snippet in console, copy the sample snippet 
         and create a class in **stepdefinitions folder** and paste it in that class.<br />
-        **Example:** Sample Step definition file path src/test/java/health/trayt/automation/stepdefinitions/LoginDemoStepDefs.java
+        **Example:** Sample Step definition class [LoginDemoStepDefs.java](src/test/java/health/trayt/automation/stepdefinitions/LoginDemoStepDefs.java)
    3) All the elements we need to interact in our scenarios should be inspected and should be added to the page object class created in **pages folder**.<br />
-      **Example:** Sample page object class file path src/test/java/health/trayt/automation/pages/HomePage.java
+      **Example:** Sample page object class [HomePage.java](src/test/java/health/trayt/automation/pages/HomePage.java)
+   4) All the common data like urls and credentials required to execute test cases will go in [**application.yml**](src/test/resources/application.yml) file.
 3) ### How to run Automation Framework
    * By using maven command.(Most preferred and suggested way)<br />
-     **Example:**
+     **Example:**<br />
      `mvn clean test -Dspring.profiles.active=dev -Dcucumber.filter.tags=@TraytLoginDemo -Dbrowser=chrome`
      <br />Possible values for below properties<br />
-     spring.profiles.active: dev or qa or stage or prod
-     <br />browser: chrome or edge or firefox
-     <br />cucumber.filter.tags: all the tags we want run 
+     **spring.profiles.active:** dev or qa or stage or prod
+     <br />**browser:** chrome or edge or firefox
+     <br />**cucumber.filter.tags:** all the tags we want run 
 4) ### Generate Execution Report
-   * After execution is completed in command prompt navigate to target folder and run the below command.<br />
+   * After execution is completed in command prompt navigate to **target folder** and run the below command.<br />
      `allure serve`<br />
     Sample report looks like below image:<br />
     **Overview page:**<br />
