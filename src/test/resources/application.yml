@@ -1,21 +1,24 @@
-spring.banner.location: classpath:traytbanner.txt
+spring.banner.location: classpath:hdfcbanner.txt
 screenshot.path: src/test/resources/screenshots
-browser: chrome
+browser: edge
 default.timeout: 30
 ---
 spring.config.activate.on-profile: dev
-portal:
-  url: https://dev.portal.trayt.io/
-  credentials: "{AUTO_ADMIN:'autotchattdev+auto1@gmail.com=Tchatt123$'}"
+hdfc:
+  portal:
+    url: https://app.dev.hdfc.live.backbaseservices.com/retail-app
+    credentials: "{CUSTOMER_1:'192598181=hdfcbank1'}"
 
 ---
-spring.config.activate.on-profile: qa
-portal:
-  url: https://dev.portal.trayt.io/
-  credentials: "{AUTO_ADMINQA:'autotchattdev+auto1@gmail.com=Tchatt123$'}"
+spring.config.activate.on-profile: tst
+hdfc:
+  portal:
+  url: https://app.tst.hdfc.live.backbaseservices.com/retail-app
+  credentials: "{CUSTOMER_1:'192598181=hdfcbank1'}"
 
 ---
-spring.config.activate.on-profile: prod
-portal:
-  url: https://prod.portal.trayt.io/
-  credentials: "{AUTO_ADMINPROD:'autotchattdev+auto1@gmail.com=Tchatt123$'}"
+spring.config.activate.on-profile: stg
+hdfc:
+  portal:
+  url: https://app.stg.hdfc.live.backbaseservices.com/retail-app
+  credentials: "{CUSTOMER_1:'192598181=hdfcbank1'}"

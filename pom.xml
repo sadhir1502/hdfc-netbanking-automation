@@ -8,11 +8,11 @@
         <version>2.6.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>health.trayt</groupId>
-    <artifactId>trayt-portal-automation</artifactId>
+    <groupId>com.backbase.hdfc</groupId>
+    <artifactId>hdfc-netbanking-automation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>trayt-portal-automation</name>
-    <description>trayt portal automation</description>
+    <name>hdfc-netbanking-automation</name>
+    <description>hdfc netbanking automation</description>
     <properties>
         <java.version>1.8</java.version>
         <junit.jupiter.version>5.8.2</junit.jupiter.version>
