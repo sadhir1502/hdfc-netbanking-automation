@@ -7,7 +7,7 @@ This  repository contains code for Hdfc netbanking test automation
 * Maven
 * Allure Report
 ## Framework features
-* Execute scenarios and features in groups using Cucumber tags
+* Execute scenarios and features in groups using Cucumber tags.
 * Execute test in different browsers(Chrome, Firefox, Edge)
 * Take screenshots for failed steps in scenario.
 * Generate detailed execution report with trends and screenshots.
